@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+
+# Build output
+client/dist/
+server/uploads/
+
+# Logs and OS
+*.log
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
