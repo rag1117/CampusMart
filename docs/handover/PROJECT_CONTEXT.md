@@ -106,7 +106,7 @@ Listed in README; no payment, no real student ID verification.
 
 ## Known bugs
 
-- None confirmed after initial API smoke tests (2026-10-09). Port `5000` may be occupied on macOS (AirPlay); use another `PORT` in `.env` if needed.
+- None confirmed. Port `5000` may be occupied on macOS (AirPlay); use `PORT=5001` and matching `VITE_API_URL`. Resumed run: `npm run test:api` → **7/7 PASS** on port 5001 (2026-10-09).
 
 ## How to demonstrate
 

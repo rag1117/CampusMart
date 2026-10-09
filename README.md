@@ -83,6 +83,8 @@ npm run dev
 
 Open **http://localhost:5173** in your browser.
 
+**macOS note:** If the API fails to bind to port `5000`, set `PORT=5001` in `server/.env` and `VITE_API_URL=http://localhost:5001/api` in `client/.env`.
+
 ### Optional: sample data
 
 ```bash
@@ -99,6 +101,7 @@ Demo account after seed: `demo.student@campusmart.test` / `demo123`
 | `server` | `npm start` | Run API |
 | `server` | `npm run dev` | Run API with file watch |
 | `server` | `npm run seed` | Insert demo user and products |
+| `server` | `npm run test:api` | Smoke-test API (server must be running) |
 | `client` | `npm run dev` | Vite dev server |
 | `client` | `npm run build` | Production build to `client/dist` |
 | `client` | `npm run preview` | Preview production build |
@@ -135,6 +138,9 @@ CampusMart/
 3. **Login:** POST `/api/auth/login` with JSON `{ "email", "password" }`
 4. **Create listing:** POST `/api/products` with `Authorization: Bearer <token>`
 5. **UI:** Browse → open a product → register → sell → my listings → edit/delete
+6. **API smoke script** (server must be running):  
+   `cd server && API_BASE=http://localhost:5001/api npm run test:api`  
+   (Use the same host/port as your running API.)
 
 ## Limitations
 
